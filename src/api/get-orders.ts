@@ -1,9 +1,10 @@
 import { api } from '@/lib/axios'
+import { OrderStatus } from '@/pages/app/orders/order-status'
 
 export interface Order {
   orderId: string
   createdAt: string
-  status: 'pending' | 'canceled' | 'processing' | 'delivering' | 'delivered'
+  status: OrderStatus
   customerName: string
   total: number
 }
