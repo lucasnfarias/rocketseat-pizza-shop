@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router-dom'
 import { queryClient } from '@/lib/react-query'
 import { SignIn } from '@/pages/auth/sign-in'
 
-describe('Sign-In', () => {
+describe('Sign In', () => {
   it('should set default email input value if email is present on search params', () => {
     const wrapper = render(<SignIn />, {
       wrapper: ({ children }) => {
