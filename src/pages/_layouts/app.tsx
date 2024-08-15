@@ -20,6 +20,8 @@ export function AppLayout() {
             navigate('/sign-in', { replace: true })
           }
         }
+
+        throw error
       },
     )
 
