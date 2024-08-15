@@ -1,11 +1,11 @@
 import { api } from '@/lib/axios'
 
-interface GetDailyRevenueInPeriodQuery {
+export interface GetDailyRevenueInPeriodQuery {
   from?: Date
   to?: Date
 }
 
-type GetDailyRevenueInPeriodResponse = {
+export type GetDailyRevenueInPeriodResponse = {
   date: string
   receipt: number
 }[]
