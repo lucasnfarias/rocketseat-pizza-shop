@@ -1,5 +1,9 @@
 import { setupWorker } from 'msw/browser'
 
+import { approveOrderMock } from '@/api/mocks/approve-order.mock'
+import { cancelOrderMock } from '@/api/mocks/cancel-order.mock'
+import { deliverOrderMock } from '@/api/mocks/deliver-order.mock'
+import { dispatchOrderMock } from '@/api/mocks/dispatch-order.mock'
 import { getDailyRevenueInPeriodMock } from '@/api/mocks/get-daily-revenue-in-period.mock'
 import { getDayOrdersAmountMock } from '@/api/mocks/get-day-orders-amount.mock'
 import { getManagedRestaurantMock } from '@/api/mocks/get-managed-restaurant.mock'
@@ -29,6 +33,10 @@ const handlers = [
   updateProfileMock,
   getOrdersMock,
   getOrderDetailsMock,
+  approveOrderMock,
+  cancelOrderMock,
+  deliverOrderMock,
+  dispatchOrderMock,
 ]
 
 export const worker = setupWorker(...handlers)
