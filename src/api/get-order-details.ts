@@ -1,7 +1,7 @@
 import { api } from '@/lib/axios'
 import { OrderStatus } from '@/pages/app/orders/order-status'
 
-interface GetOrderDetailsParams {
+export interface GetOrderDetailsParams {
   orderId: string
 }
 
