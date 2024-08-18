@@ -2,17 +2,18 @@ import { defineConfig } from '@playwright/test'
 
 export default defineConfig({
   testDir: './test',
+  testMatch: /.*\.e2e-spec\.ts$/,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   // reporter: 'html',
   use: {
-    baseURL: 'http://127.0.0.1:58798',
+    baseURL: 'http://localhost:58798',
   },
   webServer: {
     command: 'npm run dev:test',
-    url: 'http://127.0.0.1:58798',
+    url: 'http://localhost:58798',
     reuseExistingServer: !process.env.CI,
   },
 
